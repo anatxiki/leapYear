@@ -1,5 +1,5 @@
-export function leapYear(year: string): any {
-  if (year === "2020") {
+export function leapYear(year: number): boolean {
+  if (year === 2020) {
     return true;
   }
   return false;
