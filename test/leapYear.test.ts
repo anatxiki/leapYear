@@ -1,44 +1,11 @@
 import { leapYear } from "../src/leapYear";
 
 describe("comprueba si un año es bisiesto", () => {
-  it("4 es bisiesto", () => {
-    expect(leapYear(4)).toBeTruthy();
+  it.each([[4], [8], [12], [400], [800], [1200]])("%d es bisiesto", (value) => {
+    expect(leapYear(value)).toBeTruthy();
   });
 
-  it("8 es bisiesto", () => {
-    expect(leapYear(8)).toBeTruthy();
-  });
-
-  it("12 es bisiesto", () => {
-    expect(leapYear(12)).toBeTruthy();
-  });
-
-  it("2 no es bisiesto", () => {
-    expect(leapYear(2)).toBeFalsy();
-  });
-
-  it("500 no es bisiesto", () => {
-    expect(leapYear(500)).toBeFalsy();
-  });
-
-  it("100 no es bisiesto", () => {
-    expect(leapYear(100)).toBeFalsy();
-  });
-
-  it("200 no es bisiesto", () => {
-    expect(leapYear(200)).toBeFalsy();
-  });
-
-  it("400 es bisiesto", () => {
-    expect(leapYear(400)).toBeTruthy();
-  });
-  it("800 es bisiesto", () => {
-    expect(leapYear(800)).toBeTruthy();
-  });
-  it("1200 es bisiesto", () => {
-    expect(leapYear(1200)).toBeTruthy();
-  });
-  it("2100 no es bisiesto", () => {
-    expect(leapYear(2100)).toBeFalsy();
+  it.each([[2], [100], [200], [500], [2100]])("%d no es bisiesto", (value) => {
+    expect(leapYear(value)).toBeFalsy();
   });
 });
