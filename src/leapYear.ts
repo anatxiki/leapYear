@@ -1,3 +1,3 @@
-export function leapYear(arg0: string): any {
+export function leapYear(year: string): any {
   return false;
 }
