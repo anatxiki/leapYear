@@ -1,10 +1,8 @@
 export function leapYear(year: number): boolean {
-  if (isDivisibleBy(year, 400)) {
-    return true;
-  }
-  if (isDivisibleBy(year, 100)) {
+  if (isNotLeapYear(year)) {
     return false;
   }
+
   if (isDivisibleBy(year, 4)) {
     return true;
   }
@@ -13,3 +11,5 @@ export function leapYear(year: number): boolean {
 }
 
 const isDivisibleBy = (year: number, divisor: number) => year % divisor === 0;
+const isNotLeapYear = (year: number) =>
+  isDivisibleBy(year, 100) && !isDivisibleBy(year, 400);
