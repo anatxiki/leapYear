@@ -1,13 +1,17 @@
 export function leapYear(year: number): boolean {
-  if (year % 400 === 0) {
+  if (isDivisibleBy(year, 400)) {
     return true;
   }
-  if (year % 100 === 0) {
+  if (isDivisibleBy(year, 100)) {
     return false;
   }
-  if (year % 4 === 0) {
+  if (isDivisibleBy(year, 4)) {
     return true;
   }
 
   return false;
+}
+
+function isDivisibleBy(year: number, divisor: number) {
+  return year % divisor === 0;
 }
