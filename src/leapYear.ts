@@ -12,6 +12,4 @@ export function leapYear(year: number): boolean {
   return false;
 }
 
-function isDivisibleBy(year: number, divisor: number) {
-  return year % divisor === 0;
-}
+const isDivisibleBy = (year: number, divisor: number) => year % divisor === 0;
