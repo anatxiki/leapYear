@@ -8,4 +8,8 @@ describe("comprueba si un año es bisiesto", () => {
   it("2020 es bisiesto", () => {
     expect(leapYear(2020)).toBeTruthy();
   });
+
+  it("4 es bisiesto", () => {
+    expect(leapYear(4)).toBeTruthy();
+  });
 });
