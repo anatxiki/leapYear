@@ -1,4 +1,4 @@
-export function leapYear(year: number): boolean {
+export function isLeapYear(year: number): boolean {
   return isDivisibleBy(year, 100)
     ? isDivisibleBy(year, 400)
     : isDivisibleBy(year, 4);
