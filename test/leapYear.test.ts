@@ -32,4 +32,7 @@ describe("comprueba si un año es bisiesto", () => {
   it("400 es bisiesto", () => {
     expect(leapYear(400)).toBeTruthy();
   });
+  it("800 es bisiesto", () => {
+    expect(leapYear(800)).toBeTruthy();
+  });
 });
